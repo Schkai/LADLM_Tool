@@ -36,7 +36,6 @@ public class PersonOverViewController {
      */
 
     public PersonOverViewController(){
-
     }
 
     /**
@@ -93,8 +92,16 @@ public class PersonOverViewController {
             paradeLabel.setText("");
             specialLabel.setText("");
         }
-
-
     }
+
+    /**
+     * called when user click delete button
+     */
+    @FXML
+    private void handleDeletePerson(){
+        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+        personTable.getItems().remove(selectedIndex);
+    }
+    
 
 }
