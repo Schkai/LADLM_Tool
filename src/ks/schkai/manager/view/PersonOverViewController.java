@@ -2,6 +2,7 @@ package ks.schkai.manager.view;
 
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -95,13 +96,24 @@ public class PersonOverViewController {
     }
 
     /**
-     * called when user click delete button
+     * user clicks on delete button
      */
     @FXML
     private void handleDeletePerson(){
         int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
-        personTable.getItems().remove(selectedIndex);
+        if(selectedIndex >= 0){
+            personTable.getItems().remove(selectedIndex);
+        } else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(mainApp.getPrimaryStage());
+            alert.setTitle("Nothing selected");
+            alert.setHeaderText("Nothing selected");
+            alert.setContentText("Please select an object");
+
+            alert.showAndWait();
+        }
+
     }
-    
+
 
 }

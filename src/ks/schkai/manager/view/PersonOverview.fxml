@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.collections.FXCollections ?>
 
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ks.schkai.manager.view.PersonOverViewController">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ks.schkai.manager.view.PersonOverViewController">
     <children>
         <SplitPane dividerPositions="0.29797979797979796" layoutX="200.0" layoutY="62.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -52,9 +52,9 @@
                             </children>
                         </GridPane>
                         <Button layoutX="7.0" layoutY="268.0" mnemonicParsing="false" text="Random" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="7.0" />
-                        <Button layoutX="344.0" layoutY="261.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="25.0" />
-                        <Button layoutX="288.0" layoutY="268.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="85.0" />
-                        <Button layoutX="236.0" layoutY="268.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="145.0" />
+                        <Button layoutX="344.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Delete..." AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="25.0" />
+                        <Button layoutX="288.0" layoutY="268.0" mnemonicParsing="false" text="Edit..." AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="85.0" />
+                        <Button layoutX="236.0" layoutY="268.0" mnemonicParsing="false" text="New..." AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="145.0" />
                     </children>
                 </AnchorPane>
             </items>
