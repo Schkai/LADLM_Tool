@@ -1,5 +1,5 @@
 # LADLM_Tool
-Tool to organize items in a pen and paper game.
+Tool to organize items in a pen and paper game called LADLM (hence the name).
 
 Yeah, not really a pen and paper pen when you're using tools to organize your stuff but my group's just lazy as that.
 This tool is for organizing items, preferably used by the GM.
