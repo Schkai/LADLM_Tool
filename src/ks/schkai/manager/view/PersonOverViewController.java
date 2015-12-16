@@ -1,8 +1,6 @@
 package ks.schkai.manager.view;
 
-/**
- * Created by Konstantin on 16.12.2015.
- */
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -50,11 +48,18 @@ public class PersonOverViewController {
         //Initialize person table with two columns
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         typColumn.setCellValueFactory(cellData -> cellData.getValue().typProperty());
+
+        showPersonDetails(null);
+
+        //Listen for selection changes and show details when changed
+        personTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> showPersonDetails(newValue));
+
+
     }
 
     /**
      * Called by main app to give a reference back to itself
-     * @param mainApp
+     * @param mainApp is used for that
      */
 
     public void setMainApp(MainApp mainApp){
