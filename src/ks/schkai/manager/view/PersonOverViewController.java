@@ -65,5 +65,31 @@ public class PersonOverViewController {
     }
 
 
+    /**
+     * fill all text fields to show details about person or objective
+     * if person is null, text fields are cleared
+     *
+     * @param person the person or null
+     */
+
+    private void showPersonDetails(Person person){
+        if(person != null){
+            //fill labels with info from person object
+            nameLabel.setText(person.getName());
+            typLabel.setText(person.getTyp());
+            damageLabel.setText(person.getDamage());
+            paradeLabel.setText(person.getParade());
+            specialLabel.setText(person.getSpecial());
+        } else {
+            //person is null, remove every text
+            nameLabel.setText("");
+            typLabel.setText("");
+            damageLabel.setText("");
+            paradeLabel.setText("");
+            specialLabel.setText("");
+        }
+
+
+    }
 
 }
