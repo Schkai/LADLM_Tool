@@ -59,9 +59,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("LADLM Tool");
-
         initRootLayout();
-
         showPersonOverview();
     }
 
@@ -75,6 +73,7 @@ public class MainApp extends Application {
             loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
+            
             //Show the scene with the root layout
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
